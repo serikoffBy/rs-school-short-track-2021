@@ -12,23 +12,20 @@
 function sortByHeight(arr) {
   let newSortArr = [];
   let minusArr = [];
-  let newArr = [];
+  const newArr = [];
   minusArr = arr.map((elem, index) => {
-    if(elem === -1) {
+    if (elem === -1) {
       return elem;
     }
   });
-  newSortArr = arr.filter((elem) => elem!==-1);
-    newSortArr.sort((a, b) => {
-      return a-b;
-  });
-  for(let i=0, j=0;i<minusArr.length; i++) {
-    if(minusArr[i] === undefined) {
-      newArr[i]=newSortArr[j];
+  newSortArr = arr.filter((elem) => elem !== -1);
+  newSortArr.sort((a, b) => a - b);
+  for (let i = 0, j = 0; i < minusArr.length; i++) {
+    if (minusArr[i] === undefined) {
+      newArr[i] = newSortArr[j];
       j++;
-    }
-    else {
-      newArr[i]=minusArr[i];
+    } else {
+      newArr[i] = minusArr[i];
     }
   }
   return newArr;
