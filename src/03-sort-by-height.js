@@ -13,7 +13,7 @@ function sortByHeight(arr) {
   let newSortArr = [];
   let minusArr = [];
   const newArr = [];
-  minusArr = arr.map((elem, index) => {
+  minusArr = arr.map((elem) => {
     if (elem === -1) {
       return elem;
     }
