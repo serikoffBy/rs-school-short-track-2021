@@ -16,7 +16,6 @@
 function renameFiles(names) {
   const newArr = [];
   for (let i = 0, j = 1; i < names.length; i++) {
-    const element = names[i];
     if (newArr.includes(names[i])) {
       if (newArr.includes(`${names[i]}(${j})`)) {
         newArr[i] = `${names[i]}(${j + 1})`;
