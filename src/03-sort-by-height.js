@@ -16,7 +16,9 @@ function sortByHeight(arr) {
   minusArr = arr.map((elem) => {
     if (elem === -1) {
       return elem;
-    } else return undefined;
+    } else {
+      return undefined;
+    }
   });
   newSortArr = arr.filter((elem) => elem !== -1);
   newSortArr.sort((a, b) => a - b);
