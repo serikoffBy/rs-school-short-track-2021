@@ -14,9 +14,8 @@
  */
 function isMAC48Address(n) {
   if (n.split('-').length !== 6) return false;
-  for(let i = 0; i < n.split('-').length; i++) {
-    if(isNaN(parseInt(n.split('-')[i], 16)))
-      return false;
+  for (let i = 0; i < n.split('-').length; i++) {
+    if (isNaN(parseInt(n.split('-')[i], 16))) return false;
   }
   return true;
 }

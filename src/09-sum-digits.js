@@ -11,10 +11,8 @@
  *
  */
 function getSumOfDigits(n) {
-  let s = n.toString().split('').reduce((sum, cur) => {
-   return (+sum + +cur);
-  });
-  if(s >= 10) {
+  const s = n.toString().split('').reduce((sum, cur) => (+sum + +cur));
+  if (s >= 10) {
     return getSumOfDigits(s);
   }
   return s;
