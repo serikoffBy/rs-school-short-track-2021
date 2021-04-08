@@ -19,16 +19,15 @@ function getMatrixElementsSum(matrix) {
   if (matrix.length === 0) return sum;
   for (let i = 0; i < matrix.length; i++) {
     for (let j = 0; j < matrix[i].length; j++) {
-      if(i === 0) {
-        sum = sum + matrix[i][j];
+      if (i === 0) {
+        sum += matrix[i][j];
       }
       else if (matrix[i - 1][j] === 0) {
-        sum = sum + 0;
+        sum += 0;
       }
       else {
-        sum = sum + matrix[i][j];
+        sum += matrix[i][j];
       }
-      //sum += ((i === 0) ? matrix[i][j] : ((matrix[i - 1][j] === 0) ? 0 : matrix[i][j]));
     }
   }
   return sum;
