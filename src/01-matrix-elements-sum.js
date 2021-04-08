@@ -21,11 +21,9 @@ function getMatrixElementsSum(matrix) {
     for (let j = 0; j < matrix[i].length; j++) {
       if (i === 0) {
         sum += matrix[i][j];
-      }
-      else if (matrix[i - 1][j] === 0) {
+      } else if (matrix[i - 1][j] === 0) {
         sum += 0;
-      }
-      else {
+      } else {
         sum += matrix[i][j];
       }
     }
