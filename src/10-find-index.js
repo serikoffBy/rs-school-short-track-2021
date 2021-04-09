@@ -12,20 +12,21 @@
  *
  */
 function findIndex(array, value) {
-	let firstValue = 0;
-	let lastValue = array.length;
-	let averageValue = Math.floor((firstValue+lastValue) / 2);
-	for(let i = 0; i < array.length; i++) {
-		if(array[averageValue] === value) {
-			return averageValue;
-		} else if(array[averageValue] > value) {
-			lastValue = averageValue;
-			averageValue =  Math.floor((firstValue+lastValue) / 2);
-		} else {
-			firstValue = averageValue;
-			averageValue = Math.floor((firstValue+lastValue) / 2);
-		}
-	}
+  let firstValue = 0;
+  let lastValue = array.length;
+  let averageValue = Math.floor((firstValue + lastValue) / 2);
+  for (let i = 0; i < array.length; i++) {
+		if (array[averageValue] === value) {
+      return averageValue;
+    } else if (array[averageValue] > value) {
+      lastValue = averageValue;
+      averageValue =  Math.floor((firstValue + lastValue) / 2);
+    } else {
+      firstValue = averageValue;
+      averageValue = Math.floor((firstValue + lastValue) / 2);
+    }
+  }
+  return -1;
 }
 
 module.exports = findIndex;
