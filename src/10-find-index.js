@@ -12,7 +12,20 @@
  *
  */
 function findIndex(array, value) {
-  return array.indexOf(value);
+	let firstValue = 0;
+	let lastValue = array.length;
+	let averageValue = Math.floor((firstValue+lastValue) / 2);
+	for(let i = 0; i < array.length; i++) {
+		if(array[averageValue] === value) {
+			return averageValue;
+		} else if(array[averageValue] > value) {
+			lastValue = averageValue;
+			averageValue =  Math.floor((firstValue+lastValue) / 2);
+		} else {
+			firstValue = averageValue;
+			averageValue = Math.floor((firstValue+lastValue) / 2);
+		}
+	}
 }
 
 module.exports = findIndex;
