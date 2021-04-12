@@ -31,10 +31,11 @@ function getDNSStats(arr) {
       newArray.push(dns);
     }
   }
-  return newArray.reduce((objDns, elem) => {
-    objDns[elem] = (objDns[elem] || 0) + 1;
-    return objDns;
-  }, {});
+  let objDns = {};
+  for (let i = 0; i < newArray.length; i++) {
+    objDns[newArray[i]] = (objDns[i] || 0) + 1;
+  }
+  return objDns;
 }
 
 module.exports = getDNSStats;
