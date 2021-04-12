@@ -33,7 +33,7 @@ function getDNSStats(arr) {
   }
   const objDns = {};
   for (let i = 0; i < newArray.length; i++) {
-    objDns[newArray[i]] = (objDns[i] || 0) + 1;
+    objDns[newArray[i]] = (objDns[newArray[i]] || 0) + 1;
   }
   return objDns;
 }
