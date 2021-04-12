@@ -26,7 +26,7 @@ function removeKFromList(l, k) {
     }
     temp = temp.next;
   }
-  return l;
+  return temp;
 }
 
 module.exports = removeKFromList;
