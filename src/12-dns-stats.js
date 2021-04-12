@@ -31,7 +31,7 @@ function getDNSStats(arr) {
       newArray.push(dns);
     }
   }
-  let objDns = {};
+  const objDns = {};
   for (let i = 0; i < newArray.length; i++) {
     objDns[newArray[i]] = (objDns[i] || 0) + 1;
   }
