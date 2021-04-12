@@ -24,7 +24,7 @@ class Queue {
       this.head = element;
       this.tail = element;
     }
-  this.length++;
+    this.length++;
   }
 
   dequeue() {
