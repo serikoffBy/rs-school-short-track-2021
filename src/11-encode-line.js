@@ -13,11 +13,10 @@ function encodeLine(str) {
   let temp = str[0];
   let count = 1;
   if (str.length === 0) return str;
-  for(let i = 1; i < str.length; i++) {
-    if(str[i] === temp) {
+  for (let i = 1; i < str.length; i++) {
+    if (str[i] === temp) {
       count++;
-    }
-    else {
+    } else {
       if (count === 1) {
         newStr = newStr.concat(`${temp}`);
         temp = str[i];
@@ -31,10 +30,10 @@ function encodeLine(str) {
     }
   }
   if (count === 1) {
-    newStr = newStr.concat(str[str.length-1]);
+    newStr = newStr.concat(str[str.length - 1]);
       }
     else {
-      newStr = newStr.concat(`${count}${str[str.length-1]}`);
+      newStr = newStr.concat(`${count}${str[str.length - 1]}`);
     }
   return newStr;
 }
