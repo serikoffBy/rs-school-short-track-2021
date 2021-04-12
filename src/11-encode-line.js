@@ -21,8 +21,7 @@ function encodeLine(str) {
         newStr = newStr.concat(`${temp}`);
         temp = str[i];
         count = 1;
-      }
-      else {
+      } else {
         newStr = newStr.concat(`${count}${temp}`);
       }
       temp = str[i];
@@ -31,8 +30,7 @@ function encodeLine(str) {
   }
   if (count === 1) {
     newStr = newStr.concat(str[str.length - 1]);
-    }
-  else {
+  } else {
     newStr = newStr.concat(`${count}${str[str.length - 1]}`);
   }
   return newStr;
