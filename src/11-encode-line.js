@@ -31,10 +31,10 @@ function encodeLine(str) {
   }
   if (count === 1) {
     newStr = newStr.concat(str[str.length - 1]);
-      }
-    else {
-      newStr = newStr.concat(`${count}${str[str.length - 1]}`);
     }
+  else {
+    newStr = newStr.concat(`${count}${str[str.length - 1]}`);
+  }
   return newStr;
 }
 
